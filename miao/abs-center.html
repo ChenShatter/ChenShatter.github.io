@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br><p>行内块元素居中</p><br>
+    <div class="a"><span>Lorem ipsum dolor sit  elit. Ducimus at</div></h1>
+    <br><p>绝对居中</p><br> 
+    <div class="b"><span>Lorem ipsum dolor sit amet.</span></div>
+    
+</body>
+<style>
+    *{
+  box-shadow:0 0 2px red;
+  background-color:rgba(0,0,0,0.1);
+}
+div.a{
+  height:400px;
+  line-height:400px;
+  font-size:0px;
+  text-align:center;
+  
+}
+div.a>span{
+  display:inline-block;
+  line-height:normal;
+  vertical-align:middle;
+  font-size:16px;
+}
+div.b{
+    height: 400px;
+    position: relative;
+}
+p{
+  font-size:30px;
+  text-align:center;
+}
+div.b{
+  height:400px;
+  position:relative;
+}
+div.b>span{
+  position:absolute;
+  width:200px;
+  height:50px;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  text-align:center;
+  
+}
+</style>
+</html>

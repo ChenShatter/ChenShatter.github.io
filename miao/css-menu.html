@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>主食
+    <ul>
+      <li>澳洲牛排
+      <ul>
+        <li>M5</li>
+        <li>M9</li>
+        <li>M12</li>
+      </ul>
+      </li>
+      <li>日本和牛
+       <ul>
+        <li>M5</li>
+        <li>M9</li>
+        <li>M12</li>
+      </ul>
+      </li>
+      <li>酱汁选择
+        <ul>
+        <li>黑胡椒</li>
+        <li>玫瑰盐</li>
+        <li>无</li>
+        </ul>
+      </li>
+      <li>熟度</li>
+    </ul>
+    </li>
+    <li>小吃
+    <ul>
+      <li>澳洲牛排
+      <ul>
+        <li>M5</li>
+        <li>M9</li>
+        <li>M12</li>
+      </ul>
+      </li>
+      <li>日本和牛
+       <ul>
+        <li>M5</li>
+        <li>M9</li>
+        <li>M12</li>
+      </ul>
+      </li>
+      <li>酱汁选择
+        <ul>
+        <li>黑胡椒</li>
+        <li>玫瑰盐</li>
+        <li>无</li>
+        </ul>
+      </li>
+      <li>熟度</li>
+    </ul>
+    </li>
+    <li>饮料
+    <ul>
+      <li>澳洲牛排
+      <ul>
+        <li>M5</li>
+        <li>M9</li>
+        <li>M12</li>
+      </ul>
+      </li>
+      <li>日本和牛
+       <ul>
+        <li>M5</li>
+        <li>M9</li>
+        <li>M12</li>
+      </ul>
+      </li>
+      <li>酱汁选择
+        <ul>
+        <li>黑胡椒</li>
+        <li>玫瑰盐</li>
+        <li>无</li>
+        </ul>
+      </li>
+      <li>熟度</li>
+    </ul></li>
+    <li>酒
+    <ul>
+      <li>澳洲牛排
+      <ul>
+        <li>M5</li>
+        <li>M9</li>
+        <li>M12</li>
+      </ul>
+      </li>
+      <li>日本和牛
+       <ul>
+        <li>M5</li>
+        <li>M9</li>
+        <li>M12</li>
+      </ul>
+      </li>
+      <li>酱汁选择
+        <ul>
+        <li>黑胡椒</li>
+        <li>玫瑰盐</li>
+        <li>无</li>
+        </ul>
+      </li>
+      <li>熟度</li>
+    </ul>
+    </li>
+  </ul>
+</body>
+<style>
+ *{
+  background-color:rgba(0,0,0,0.1);
+}
+ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  font-size:0px;
+}
+li{
+  font-size:16px;
+  display:inline-block;
+  padding:2px 16px;
+  position:relative;
+  white-space:nowrap;
+}
+ul ul{
+  display:none;
+  position:absolute;
+  left:0;
+  top:100%;
+}
+ul ul ul{
+  top:0;
+  left:100%;
+}
+ul li:hover >ul{
+  display:block;
+}
+li li {
+  display:block;
+}
+</style>
+</html>

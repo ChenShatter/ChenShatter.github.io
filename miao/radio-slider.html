@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio" name="slider" id="">
+<input type="radio" name="slider" id="">
+<input type="radio" name="slider" id="">
+<input type="radio" name="slider" id="">
+<input type="radio" name="slider" id="">
+ <div>
+<img src="https://tse1-mm.cn.bing.net/th/id/OIP.nlNEVRocBka7cByqF4yFpQHaFS?pid=Api&rs=1" alt="">
+<img src="https://tse3-mm.cn.bing.net/th/id/OIP.YaTbyifCB0bAlAiPaDhMOQHaGM?pid=Api&rs=1" alt="">
+<img src="https://file01.16sucai.com/d/file/2013/0719/20130719101603751.jpg" alt="">
+<img src="https://tse3-mm.cn.bing.net/th/id/OIP.p6Hhm0lO9SuYbtCNuXZbdwHaIE?pid=Api&rs=1" alt="">
+<img src="https://tse3-mm.cn.bing.net/th/id/OIP.Zv9gpcbfj_hDhIetBolrogHaEo?pid=Api&rs=1" alt="">
+ </div>
+</body>
+<style>
+input:nth-child(1):checked ~ div img:nth-child(1),
+input:nth-child(2):checked ~ div img:nth-child(2),
+input:nth-child(3):checked ~ div img:nth-child(3),
+input:nth-child(4):checked ~ div img:nth-child(4),
+input:nth-child(5):checked ~ div img:nth-child(5)
+{
+  left:0; z-index:5;
+}
+div{
+  width:300px;
+  height:200px;
+  position:relative;
+  overflow:hidden;
+}
+div>img{
+  position:absolute;
+  height:100%;
+  width:100%;
+  left:100%;
+  transition:1s;
+
+}
+</style>
+</html>
