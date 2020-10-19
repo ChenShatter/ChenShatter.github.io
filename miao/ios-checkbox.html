@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" name="" id="a">
+  
+  <label for="a">
+    <span></span>
+  </label>
+</body>
+<style>
+    label{
+  width:100px;
+  height:40px;
+  display:inline-block;
+  border-radius:30px;
+  position:relative;
+  background-color: rgba(0,0,0,0.1);
+  box-shadow:0 0 2px;
+}
+span{
+  width:39px;
+  height:39px;
+ 
+  display:inline-block;
+  border-radius: 100%;
+  position:absolute;
+  left:0; 
+  transition:0.5s;
+  background-color: white;
+}
+input:checked+label{
+  background-color:rgb(65,274,93);
+  transition:0.5s;
+}
+input:checked+label span{
+  left:60px; 
+}
+input{
+  display:none;
+}
+</style>
+</html>
