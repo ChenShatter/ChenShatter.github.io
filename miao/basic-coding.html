@@ -1,0 +1,360 @@
+<script id="ch0103/01" type="norun">
+    var a = Number(prompt('a ='))
+    var b = Number(prompt('b ='))
+    var c = a + b
+    console.log(c)
+</script>
+
+<script id="ch0103/02" type="norun">
+    var a = Number(prompt('a ='))
+    var b = Number(prompt('b ='))
+    var c = Number(prompt('c ='))
+    console.log((a+b)*c)
+</script>
+
+<script id="ch0103/03" type="norun">
+    var a = Number(prompt('a ='))
+    var b = Number(prompt('b ='))
+    var c = Number(prompt('c ='))
+    console.log(parseInt((a+b)/c))
+</script>
+
+<script id="ch0103/04" type="norun">
+    var a = Number(prompt('a ='))
+    var b = Number(prompt('b ='))
+    console.log((a/b).toFixed(0))
+    console.log(a%b)
+</script>
+
+<script id="ch0103/05" type="norun">
+  var a = Number(prompt('a ='))
+  var b = Number(prompt('b ='))
+  console.log((a/b).toFixed(9))
+</script>
+
+<script id="ch0103/06" type="norun">
+  var a = Number(prompt('确诊数='))
+  var b = Number(prompt('死亡数='))
+  console.log((b/a)*100 + '%')
+</script>
+
+<script id="ch0103/07" type="norun">
+var a = Number(prompt('a ='))
+var b = Number(prompt('b ='))
+var c = Number(prompt('c ='))
+var d = Number(prompt('d ='))
+var x = Number(prompt('x ='))
+console.log((a*x*x*x+b*x*x+c*x+d).toFixed(7))
+</script>
+
+<script id="ch0103/08" type="norun">
+var F = Number(prompt('F = '))
+console.log((C =5 * (F-32) / 9 ).toFixed(5))
+</script>
+
+<script id="ch0103/09" type="norun">
+var r = Number(prompt('r ='))
+var p = 3.14159
+console.log(2*r)
+console.log(2*pi*r)
+console.log(pi*r*r)
+</script>
+
+<script id="ch0103/10" type="norun">
+var r1 = Number(prompt('r1 ='))
+var r2 = Number(prompt('r2 ='))
+console.log((1/(1/r1 + 1/r2)).toFixed(2))
+</script>
+
+<script id="ch0103/11" type="norun">
+var a = Number(prompt('a ='))
+var b = Number(prompt('b ='))
+console.log(a % b)
+</script>
+
+<script id="ch0103/12" type="norun">
+var pi = 3.14
+var r = Number(prompt('r ='))
+console.log((4/3)*pi*r*r*r)
+</script>
+
+<script id="ch0103/13" type="norun">
+var a = Number(prompt('a ='))
+console.log(a%10,(a/10)%10,a/100)
+</script>
+
+<script id="ch0103/14" type="norun">
+var h =Number(prompt('h ='))
+var r =Number(prompt('r ='))
+var pi =3.14159
+console.log(20000/(pi*r*r*h))
+</script>
+
+<script id="ch0103/15" type="norun">
+var x =Number(prompt('x='))
+var y =Number(prompt('y='))
+var n =Number(prompt('n='))
+console.log(n-Math.ceil(y/x))
+</script>
+
+<script id="ch0103/16" type="norun">
+var x1 =Number(prompt('x1='))
+var x2 =Number(prompt('x2='))
+var y1 =Number(prompt('y1='))
+var y2 =Number(prompt('y2='))
+console.log(Math.sqrt((x1-x2)*(x1-x2))+Math.sqrt((y1-y2)*(y1-y2)))
+</script>
+
+
+<script id="ch0104/01" type="norun">
+var n =Number(prompt('n='))
+if(n>0)
+{
+    console.log('positive');
+}
+else if(n=0)
+{
+    console.log('zero');
+}
+else{
+    console.log('negative');
+}
+</script>
+
+<script id="ch0104/02" type="nprun">
+    var n =Number(prompt('n ='))
+    if(Math.abs(n)<10000)
+    {
+        console.log((Math.abs(n.toFixed(2))))
+    }
+</script>
+
+<script id="ch0104/03" type="norun">
+var n =Number(prompt('n ='))
+if(n%2==1)
+{
+    console.log('odd')
+}
+else
+{
+    console.log('even')
+}
+</script>
+
+<script id="ch0104/04" type="norun">
+var n = Number(prompt('n ='))
+if(n%2==1)
+{
+    console.log('YES')
+}
+else{
+    console.log('NO')
+}
+</script>
+
+<script id="ch0104/05" type="norun">
+var x =Number(prompt('x='))
+var y =Number(prompt('y='))
+if(x>y){
+    console.log('>')
+}
+else if(x=y)
+{
+    console.log('=')
+}
+else{
+    console.log("<")
+}
+</script>
+
+<script id="ch0104/06" type="norun">
+var x=Number(prompt('x='))
+if((x/100)<1&&(x/10)>1)
+{
+    console.log(1)
+}
+else
+{
+    console.log(0)
+}
+</script>
+
+<script id='ch0104/07' type="norun">
+var x=Number(prompt('x ='))
+var y=Number(prompt('y ='))
+if(x>=10||y>=20)
+{
+    console.log(1)
+}
+else{
+    console.log(0)
+}
+</script>
+
+<script id="ch0104/08" type="norun">
+var x=Number(prompt('x='))
+if((x%3)==0 && (x%5)==0)
+{
+console.log('YES')
+}
+else
+{
+    console.log('no')
+}
+</script>
+
+<script id="ch0104/09" type="norun">
+var x=Number(prompt('x='))
+if((x%3)==0)
+{
+    console.log(3)
+}
+if((x%5)==0)
+    {
+        console.log(5)
+    }
+if((x%7)==0)
+        {
+            console.log(7)
+        }
+</script>
+
+<script id="ch0104/10" type="norun">
+var x=Number(prompt('x ='))
+var y=Number(prompt('y ='))
+if(x>50&&y>50)
+{
+    console.log(1)
+}
+else{
+    console.log(0)
+}
+</script>
+
+<script id="ch0104/11" type="norun">
+var x=Number(prompt('x ='))
+if(x==1||x==3||x==5)
+{
+    console.log('no')
+}
+else{
+    console.log('yes')
+}
+</script>
+
+<script id="ch0104/12" type="norun">
+var x=Number(prompt('x ='))
+if((x/3)+50>(x/1.2))
+{
+    console.log('walk')
+}
+else if((x/3)+50==(x/1.2))
+{
+    console.log('all')
+}
+else{
+    console.log('bike')
+}
+</script>
+
+
+<script id="ch0104/13" type="norun">
+var n=Number(prompt('n ='))
+if(n>=0&&n<5)
+{
+    console.log((-n)+2.5)
+}
+else if(n>=5&&n<10)
+{
+    console.log(2-1.5*(n-3)*(n-3))
+}
+else{
+    console.log(n/2-1.5)
+}
+</script>
+
+<script id="ch0104/14" type="norun">
+var n=Number(prompt('n='))
+if(n<1000)
+{
+    console.log(8)
+}
+else if(n>100)
+{
+    console.log(8+Math.ceil(n/500)*4)
+}
+</script>
+
+<script id="ch0104/15" type="norun">
+    var x=Number(prompt('x ='))
+    var y=Number(prompt('y ='))
+    var z=Number(prompt('z ='))
+  if(x>y&&x>z)
+  {
+      console.log(x)
+  }
+  if(x<y&&x<z&&y<z)
+  {
+      console.log(z)
+  }
+  if(x<y&&z<y)
+  {
+      console.log(y)
+  }
+  
+</script>
+
+
+<script id="ch0104/16" type="norun">
+    var x=Number(prompt('x ='))
+    var y=Number(prompt('y ='))
+    var z=Number(prompt('z ='))
+    if((x+y)>z&&(x-y)<z)
+    {
+        console.log('yes')
+    }
+    else{
+        console.log('no')
+    }
+</script>
+
+<script id="ch0104/17" type="norun">
+ var x=Number(prompt('x ='))
+ if((x%4)==0&&(x%100)!=0||x%400)
+ {
+     console.log('闰年')
+ }
+ else{
+     console.log('bushi')
+ }
+</script>
+
+<script id="ch0104/20" type="norun">
+var a=Number(prompt('a ='))
+var b=Number(prompt('b ='))
+var c=Number(prompt('c ='))
+var delta=b*b-4*a*c
+x1 = (-b+Math.sqrt(b*b-4*a*c))/(2*a);
+x2 = (-b-Math.sqrt(b*b-4*a*c))/(2*a);
+if(delta>0||delta==0)
+{
+    console.log(x1,x2)
+}
+else{
+    console.log( (-b) / (2*a),Math.sqrt(4*a*c-b*b) / (2*a)+'i')
+}
+</script>
+
+
+<script id="ch0104/21">
+    var x=Number(prompt('x ='))
+    var y=Number(prompt('y ='))
+    var n=Number(prompt('n ='))
+    if((y%x)==0)
+{
+console.log(n-(y/x))
+}
+else{
+    console.log(n-Math.ceil(y/x)
+}
+</script>

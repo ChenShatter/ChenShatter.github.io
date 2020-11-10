@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div>
+    <i class="fa fa-star-o">1</i>
+    <i class="fa fa-star-o">2</i>
+    <i class="fa fa-star-o">3</i>
+    <i class="fa fa-star-o">4</i>
+    <i class="fa fa-star-o">5</i>
+    </div>
+</body>
+<style>
+    div{
+  display:flex;
+  flex-direction:row-reverse;
+  justify-content:flex-end;
+}
+i:nth-child(1):hover~:nth-child(-n+5),i:nth-child(1):hover
+{
+  color:gold;
+}
+i:nth-child(2):hover~:nth-child(-n+5),i:nth-child(2):hover
+{
+  color:gold;
+}
+i:nth-child(3):hover~:nth-child(-n+5),i:nth-child(3):hover
+{
+  color:gold;
+}
+i:nth-child(4):hover~:nth-child(-n+5),i:nth-child(4):hover
+{
+  color:gold;
+}
+i:nth-child(5):hover
+{
+  color:gold;
+}
+</style>
+</html>
