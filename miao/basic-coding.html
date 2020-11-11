@@ -102,7 +102,7 @@ var x1 =Number(prompt('x1='))
 var y1 =Number(prompt('y1='))
 var x2 =Number(prompt('x2='))
 var y2 =Number(prompt('y2='))
-console.log(Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2).toFixed(3);)
+console.log(Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2).toFixed(3))
 </script>
 
 <script id="ch0103/17" type="norun">
@@ -175,14 +175,12 @@ else
 </script>
 
 <script id="ch0104/04" type="norun">
-var n = Number(prompt('n ='))
-if(n%2==1)
-{
-    console.log('YES')
-}
-else{
-    console.log('NO')
-}
+    var str = prompt("");
+    if (str.charCodeAt() % 2 == 0) {
+      console.log("NO");
+    } else if (str.charCodeAt() % 2 == 1) {
+      console.log("YES");
+    }
 </script>
 
 <script id="ch0104/05" type="norun">
@@ -271,10 +269,10 @@ else{
 var x=Number(prompt('x ='))
 if(x==1||x==3||x==5)
 {
-    console.log('no')
+    console.log('NO')
 }
 else{
-    console.log('yes')
+    console.log('YES')
 }
 </script>
 
@@ -375,6 +373,23 @@ else if(n>100)
   else
   {
     console.log("no");
+  }
+</script>
+
+<script id="ch0104/19">
+var n1 = Number(prompt("请输入数字1:"));
+  var n2 = Number(prompt("请输入数字2:"));
+  var x = prompt("请输入运算符:");
+  if (x == "+") {
+    console.log(n1 + n2);
+  } else if (x == "-") {
+    console.log(n1 - n2);
+  } else if (x == "*") {
+    console.log(n1 * n2);
+  } else if (x == "/") {
+    console.log(n1 / n2);
+  } else {
+    console.log("Invalid operator!");
   }
 </script>
 
