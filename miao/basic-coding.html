@@ -964,7 +964,7 @@ else
 }
 </script>
 
-<script id="ch0105/31" xtype="norun">
+<script id="ch0105/31" type="norun">
 var N=Number(prompt('')) //灯的数量
 var M=Number(prompt(''))//人的数量
 var j=1
@@ -1127,7 +1127,7 @@ for(var i=1;i<=1;i++)
 }
 </script>
 
-<script id="ch0105/40" xtype="norun">
+<script id="ch0105/40" type="norun">
 var n=Number(prompt(''))
 var count=0
 for(var i=1;i<=n;i++)
@@ -1149,25 +1149,25 @@ console.log(count)
 <script id="ch0105/41" type="norun">
     var L = Number(prompt());
     var R = Number(prompt());
-    var num = 0;
+    var x = 0;
     var a = 0;
     for (var i = L; i <= R; i++) {
       a = i;
       if (a == 2) {
-        num++;
+        x++;
       }
       while (a > 2) {
         var digit = a % 10;
         a = (a - digit) / 10;
         if (digit == 2) {
-          num++;
+          x++;
         }
         if (a == 2) {
-          num++;
+          x++;
         }
       }
     }
-    console.log(num);
+    console.log(x);
 </script>
 
 <script id="ch0105/42" type="norun"></script>
