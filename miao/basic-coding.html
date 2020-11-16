@@ -1216,3 +1216,114 @@ console.log(count)
     }
     console.log(money);
 </script>
+
+<script id="narcissistic" type="no"> 
+    var narcissistic = function (x) {
+        var n = x.toString().length
+        var sum;
+        var a = 0
+        for (var i = 0; i < n; i++) {
+            sum = parseInt(x / 10 ** i) % 10
+            a = a + sum ** n
+        }
+        if (a == x) {
+                return true
+        } else {
+                return false
+        }
+    }
+    
+    </script>
+
+    <script id="narcissistics" type="norun">
+  var narcissistic = function (x) {
+        var n = x.toString().length
+        var sum;
+        var a = 0
+        for (var i = 0; i < n; i++) {
+            sum = parseInt(x / 10 ** i) % 10
+            a = a + sum ** n
+        }
+        if (a == x) {
+                return true
+        } else {
+                return false
+        }
+    }
+    
+    for(var a=10;a<=10000;a++)
+    {
+        if(narcissistic(a))
+        {
+            console.log(a)
+        }
+    }
+    </script>
+
+    <script id="palindrom" type="norun">
+        var jiechen=function(x)
+        {
+            var y=x
+            var sum=1
+            for(var i=1;i<=x;i++)
+            {
+                sum=sum*y
+                y=y-1
+            }
+            return(sum)
+        }
+    </script>
+
+    <script id="complete-number" type="no">
+           for(var i=1;i<=1000;i++){
+        var sum =0
+        var n=1
+        while(n<i){
+            if(i%n==0){
+                sum=sum+n
+            }
+            n=n+1
+        }
+        if(sum==i){
+            console.log(i)
+        }
+    }
+    </script>
+
+    <script id="prime" type="no">
+          var zhishu=function(num){
+    var count = 0;//统计因子个数(因为质数的约数只有1和他本身)
+    for( var i = 1 ; i <= num ; i++ ){
+        if( num%i == 0 ){//因子
+            count++;
+        }
+    }
+    if( count == 2 ){
+        return true
+    }else{
+       return false
+    }
+}
+    </script>
+
+    <script id="primes" type="no">
+          var zhishu=function(num){
+    var count = 0;//统计因子个数(因为质数的约数只有1和他本身)
+    for( var i = 1 ; i <= num ; i++ ){
+        if( num%i == 0 ){//因子
+            count++;
+        }
+    }
+    if( count == 2 ){
+        return true
+    }else{
+       return false
+    }
+}
+
+for(var x=1;x<=1000;x++){
+    if(zhishu(x)){
+        console.log(x)
+    }
+}
+    </script>
