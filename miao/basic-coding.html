@@ -134,7 +134,7 @@ console.log(an)
   console.log(a * b)
 </script>
 
-<script id="ch0103/20">
+<script id="ch0103/20" type="norun">
 var n =Number(prompt('n='))
 console.log(2 ** n)
 </script>
@@ -437,15 +437,15 @@ else{
     </script>
     
     <script id="ch0105/02" type="norun">
-    var x=1
-    var money=0
-    while(x<=12)
-    {
-        var y=Number(prompt('y='))
-        x=x+1;
-        money=money+y;
-    }
-    console.log('$'+(money.toFixed(2)))
+  var n = 12;
+  var num = 0;
+  var sum = 0;
+  while (num < n) {
+    var s = Number(prompt());
+    sum = sum + s;
+    num = num + 1;
+  }
+  console.log("$" + (sum / 12).toFixed(2))
     </script>
     <script id="ch0105/03" type="norun">
     var n=Number(prompt('n='))
