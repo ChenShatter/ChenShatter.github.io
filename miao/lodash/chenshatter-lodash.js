@@ -44,8 +44,7 @@ var chenshatter =function(){
         return ary[ary.length-1]
     }
 
-    function lastIndexOf(ary,value,fromIndex){
-         fromIndex=ary.length-1
+    function lastIndexOf(ary,value,fromIndex=ary.length-1){
         for(var i=fromIndex;i>=0;i--){
             if(ary[i]==value){
                 return i
@@ -80,7 +79,7 @@ var chenshatter =function(){
              return ary
          }
          for(var i=start;i<end;i++){
-             art[i]=val
+             ary[i]=val
          }
          return ary
     }
@@ -92,8 +91,7 @@ var chenshatter =function(){
         return ary[0]
     }
 
-    function indexOf(ary,val,fromIndex){
-        fromIndex=0
+    function indexOf(ary,val,fromIndex=0){
         for(var i=fromIndex;i<ary.length;i++){
             if(ary[i]==val){
                 return i
@@ -123,13 +121,45 @@ var chenshatter =function(){
 
     function sortedIndex(ary,val){
         for(var i=0;i<ary.length;i++){
-            if(val>ary[i]&&val<ary[i+1]){
-                return i+1
+            if(val<=ary[i]){
+                return i
             }
         }
+        return ary.length
     }
+
+    function max(ary){
+        var max
+        if(ary==[]){
+            return undefined
+        }
+        for(var i=1;i<ary.length;i++){
+            max=(ary[i-1]-ary[i])>0?ary[i-1]:ary[i]
+        }
+        return max
+    }
+
+    function min(ary){
+        var min
+        if(ary==[]){
+            return undefined
+        }
+        for(var i=1;i<ary.length;i++){
+            min=(ary[i-1]-ary[i])>0?ary[i]:ary[i-1]
+        }
+        return min
+    }
+
+    function sum(ary){
+        var sum
+        for(var i=0;i<ary.length;i++){
+            sum+=ary[i]
+        }
+        return sum
+    }
+
 return {
-    compact,chunk,join,last,lastIndexOf,drop,dropright,fill,head,indexOf,initial,reverse,sortedIndex,
+    compact,chunk,join,last,lastIndexOf,drop,dropright,fill,head,indexOf,initial,reverse,sortedIndex,max,min,sum,
 }
 
 }()
