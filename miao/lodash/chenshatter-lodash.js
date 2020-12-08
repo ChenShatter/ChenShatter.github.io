@@ -31,6 +31,9 @@ var chenshatter =function(){
     function join(ary,separator){
         var result=''
         var sep=String(separator)
+        if(ary.length==0){
+            return result
+        }
         for(var i=0;i<ary.length-1;i++){
             result=result+sep+ary[i]
         }
@@ -41,7 +44,7 @@ var chenshatter =function(){
         return ary[ary.length-1]
     }
 
-    function lastIndexOf(ary,value,[fromIndex=ary.length-1]){
+    function lastIndexOf(ary,value,fromIndex=ary.length-1){
         for(var i=fromIndex;i>=0;i--){
             if(ary[i]==varlue){
                 return i
@@ -51,12 +54,8 @@ var chenshatter =function(){
         return -1
     }
 
-    function drop(){
-        
-    }
-
 return {
-    compact,chunk,join,last,lastIndexOf
+    compact,chunk,join,last,lastIndexOf,
 }
 
 }()
