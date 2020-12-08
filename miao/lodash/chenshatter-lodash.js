@@ -44,18 +44,45 @@ var chenshatter =function(){
         return ary[ary.length-1]
     }
 
-    function lastIndexOf(ary,value,[fromIndex=ary.length-1]){
+    function lastIndexOf(ary,value,fromIndex){
+         fromIndex=ary.length-1
         for(var i=fromIndex;i>=0;i--){
             if(ary[i]==value){
                 return i
-                break
             }
         }
         return -1
     }
 
+    function drop(ary,num){
+        if(num==null){
+            return ary.splice(0,1)
+        }
+        return ary.splice(0,num)
+    }
+
+    function dropright(ary,num){
+        if(num==null){
+            return ary.splice(-1,1)
+        }
+        return ary.splice(-1,num)
+    }
+
+    function fill(ary,val,start,end){
+         if(start==null&&end==null){
+             for(var i=0;i<ary.length;i++){
+                 ary[i]=val
+             }
+             return ary
+         }
+         for(var i=start;i<end;i++){
+             art[i]=val
+         }
+         return ary
+    }
+
 return {
-    compact,chunk,join,last,lastIndexOf,
+    compact,chunk,join,last,lastIndexOf,drop,dropright,fill,
 }
 
 }()
