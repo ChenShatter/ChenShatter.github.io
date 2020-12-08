@@ -85,29 +85,6 @@ var chenshatter =function(){
          return ary
     }
 
-    function findIndex(){
-        var
-    }
-
-    function findLastIndex(){
-        
-    }
-
-    function flatten(){
-    }
-
-    function flattenDeep(){
-
-    }
-
-    function flattenDepth(){
-
-    }
-
-    function fromPairs(){
-
-    }
-
     function head(ary){
         if(ary==[]){
             return undefined
@@ -129,8 +106,30 @@ var chenshatter =function(){
         ary.splice(-1,1)
         return ary
     }
+
+    function reverse(ary){
+        var start=0
+        var end=ary.length-1
+        var a
+        while(start<end){
+            a=ary[start]
+            ary[start]=ary[end]
+            ary[end]=a
+            start++
+            end--
+        }
+        return ary
+    }
+
+    function sortedIndex(ary,val){
+        for(var i=0;i<ary.length;i++){
+            if(val>ary[i]&&val<ary[i+1]){
+                return i+1
+            }
+        }
+    }
 return {
-    compact,chunk,join,last,lastIndexOf,drop,dropright,fill,head,indexOf,initial,
+    compact,chunk,join,last,lastIndexOf,drop,dropright,fill,head,indexOf,initial,reverse,sortedIndex,
 }
 
 }()
