@@ -55,21 +55,25 @@ var chenshatter =function(){
     }
 
     function drop(ary,num){
-        if(num==null){
-            return ary.splice(0,1)
+        if(num==undefined){
+            ary.splice(0,1)
+            return ary
         }
-        return ary.splice(0,num)
+         ary.splice(0,num)
+         return ary
     }
 
     function dropright(ary,num){
-        if(num==null){
-            return ary.splice(-1,1)
+        if(num==undefined){
+             ary.splice(-1,1)
+             return ary
         }
-        return ary.splice(-1,num)
+        ary.splice(-1,num)
+        return ary
     }
 
     function fill(ary,val,start,end){
-         if(start==null&&end==null){
+         if(start==undefined&&end==undefined){
              for(var i=0;i<ary.length;i++){
                  ary[i]=val
              }
@@ -81,8 +85,52 @@ var chenshatter =function(){
          return ary
     }
 
+    function findIndex(){
+        var
+    }
+
+    function findLastIndex(){
+        
+    }
+
+    function flatten(){
+    }
+
+    function flattenDeep(){
+
+    }
+
+    function flattenDepth(){
+
+    }
+
+    function fromPairs(){
+
+    }
+
+    function head(ary){
+        if(ary==[]){
+            return undefined
+        }
+        return ary[0]
+    }
+
+    function indexOf(ary,val,fromIndex){
+        fromIndex=0
+        for(var i=fromIndex;i<ary.length;i++){
+            if(ary[i]==val){
+                return i
+            }
+        }
+        return -1
+    }
+
+    function initial(ary){
+        ary.splice(-1,1)
+        return ary
+    }
 return {
-    compact,chunk,join,last,lastIndexOf,drop,dropright,fill,
+    compact,chunk,join,last,lastIndexOf,drop,dropright,fill,head,indexOf,initial,
 }
 
 }()
