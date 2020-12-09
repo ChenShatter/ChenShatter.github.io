@@ -160,37 +160,37 @@ var chenshatter =function(){
         return sum1
     }
 
-    function flatten(ary){
+    function flatten(Array){
         //return [].concat(...ary)直接拼接大佬的理解
         var result=[]
-        for(var i=0;i<ary.length;i++){
-            if(ary.isArray(ary[i])){ //判断是否为数组
-                result.push(...ary[i]) //拆开push
+        for(var i=0;i<Array.length;i++){
+            if(Array.isArray(Array[i])){ //判断是否为数组
+                result.push(...Array[i]) //拆开push
             }else{
-                result.push(ary[i])
+                result.push(Array[i])
             }
         }
         return result
     }
 
-    function flattenDeep(ary){
+    function flattenDeep(Array){
         var result=[]
         for(var i=0;i<ary.length;i++){
-            if(ary.isArray(ary[i])){
-                result.push(...flattenDeep(ary[i]))
+            if(Array.isArray(ary[i])){
+                result.push(...flattenDeep(Array[i]))
             }else{
-                result.push(ary[i])
+                result.push(Array[i])
             }
         }
         return result
     }
 
-    function flattenDepth(ary,num){
+    function flattenDepth(Array,num){
         while(num){
-            ary=flatten(ary)
+            Array=flatten(Array)
             num--
         }
-        return ary
+        return Array
     }
 
     function fromPairs(pairs){
