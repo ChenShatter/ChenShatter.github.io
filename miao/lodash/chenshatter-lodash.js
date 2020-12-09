@@ -44,8 +44,8 @@ var chenshatter =function(){
         return ary[ary.length-1]
     }
 
-    function lastIndexOf(ary,value){
-        for(var i=ary.length-1;i>=0;i--){
+    function lastIndexOf(ary,value,fromIndex=ary.length-1){
+        for(var i=fromIndex;i>=0;i--){
             if(ary[i]==value){
                 return i
             }
@@ -64,11 +64,13 @@ var chenshatter =function(){
 
     function dropRight(ary,num){
         if(num==undefined){
-             ary.splice(-1,1)
-             return ary
+            num=1
         }
-        ary.splice(-1,num)
-        return ary
+        if(num>ary.length){
+            return []
+        }else{
+            return ary.slice(0,ary.length-num)
+        }
     }
 
     function fill(ary,val,start,end){
@@ -91,8 +93,8 @@ var chenshatter =function(){
         return ary[0]
     }
 
-    function indexOf(ary,val){
-        for(var i=0;i<ary.length;i++){
+    function indexOf(ary,val,fromIndex=0){
+        for(var i=fromIndex;i<ary.length;i++){
             if(ary[i]==val){
                 return i
             }
@@ -162,7 +164,7 @@ var chenshatter =function(){
         //return [].concat(...ary)直接拼接大佬的理解
         var result=[]
         for(var i=0;i<ary.length;i++){
-            if(ary.isArarry(ary[i])){ //判断是否为数组
+            if(ary.isArray(ary[i])){ //判断是否为数组
                 result.push(...ary[i]) //拆开push
             }else{
                 result.push(ary[i])
@@ -174,7 +176,7 @@ var chenshatter =function(){
     function flattenDeep(ary){
         var result=[]
         for(var i=0;i<ary.length;i++){
-            if(ary.isArarry(ary[i])){
+            if(ary.isArray(ary[i])){
                 result.push(...flattenDeep(ary[i]))
             }else{
                 result.push(ary[i])
@@ -183,7 +185,7 @@ var chenshatter =function(){
         return result
     }
 
-    function flattenDeepth(ary,num){
+    function flattenDepth(ary,num){
         while(num){
             ary=flatten(ary)
             num--
@@ -200,7 +202,7 @@ var chenshatter =function(){
     }
 
 return {
-    compact,chunk,join,last,lastIndexOf,drop,dropRight,fill,head,indexOf,initial,reverse,sortedIndex,max,min,sum,flatten,flattenDeep,flattenDeepth,fromPairs,
+    compact,chunk,join,last,lastIndexOf,drop,dropRight,fill,head,indexOf,initial,reverse,sortedIndex,max,min,sum,flatten,flattenDeep,flattenDepth,fromPairs,
 }
 
 }()
