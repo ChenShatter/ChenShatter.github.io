@@ -44,8 +44,8 @@ var chenshatter =function(){
         return ary[ary.length-1]
     }
 
-    function lastIndexOf(ary,value,fromIndex=ary.length-1){
-        for(var i=fromIndex;i>=0;i--){
+    function lastIndexOf(ary,value){
+        for(var i=ary.length-1;i>=0;i--){
             if(ary[i]==value){
                 return i
             }
@@ -62,7 +62,7 @@ var chenshatter =function(){
          return ary
     }
 
-    function dropright(ary,num){
+    function dropRight(ary,num){
         if(num==undefined){
              ary.splice(-1,1)
              return ary
@@ -91,8 +91,8 @@ var chenshatter =function(){
         return ary[0]
     }
 
-    function indexOf(ary,val,fromIndex=0){
-        for(var i=fromIndex;i<ary.length;i++){
+    function indexOf(ary,val){
+        for(var i=0;i<ary.length;i++){
             if(ary[i]==val){
                 return i
             }
@@ -129,37 +129,78 @@ var chenshatter =function(){
     }
 
     function max(ary){
-        var max
+        var max1
         if(ary==[]){
             return undefined
         }
         for(var i=1;i<ary.length;i++){
-            max=(ary[i-1]-ary[i])>0?ary[i-1]:ary[i]
+            max1=(ary[i-1]-ary[i])>0?ary[i-1]:ary[i]
         }
-        return max
+        return max1
     }
 
     function min(ary){
-        var min
+        var min1
         if(ary==[]){
             return undefined
         }
         for(var i=1;i<ary.length;i++){
-            min=(ary[i-1]-ary[i])>0?ary[i]:ary[i-1]
+            min1=(ary[i-1]-ary[i])<0?ary[i-1]:ary[i]
         }
-        return min
+        return min1
     }
 
     function sum(ary){
-        var sum
+        var sum1=0
         for(var i=0;i<ary.length;i++){
-            sum+=ary[i]
+            sum1+=ary[i]
         }
-        return sum
+        return sum1
+    }
+
+    function flatten(ary){
+        //return [].concat(...ary)直接拼接大佬的理解
+        var result=[]
+        for(var i=0;i<ary.length;i++){
+            if(ary.isArarry(ary[i])){ //判断是否为数组
+                result.push(...ary[i]) //拆开push
+            }else{
+                result.push(ary[i])
+            }
+        }
+        return result
+    }
+
+    function flattenDeep(ary){
+        var result=[]
+        for(var i=0;i<ary.length;i++){
+            if(ary.isArarry(ary[i])){
+                result.push(...flattenDeep(ary[i]))
+            }else{
+                result.push(ary[i])
+            }
+        }
+        return result
+    }
+
+    function flattenDeepth(ary,num){
+        while(num){
+            ary=flatten(ary)
+            num--
+        }
+        return ary
+    }
+
+    function fromPairs(pairs){
+        var map={}
+        for(var i=0;i<pairs.length;i++){
+            map[pairs[i][0]]=pairs[i][1]
+        }
+        return map
     }
 
 return {
-    compact,chunk,join,last,lastIndexOf,drop,dropright,fill,head,indexOf,initial,reverse,sortedIndex,max,min,sum,
+    compact,chunk,join,last,lastIndexOf,drop,dropRight,fill,head,indexOf,initial,reverse,sortedIndex,max,min,sum,flatten,flattenDeep,flattenDeepth,fromPairs,
 }
 
 }()
