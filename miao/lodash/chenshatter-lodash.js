@@ -160,37 +160,37 @@ var chenshatter =function(){
         return sum1
     }
 
-    function flatten(Array){
+    function flatten(array){
         //return [].concat(...ary)直接拼接大佬的理解
         var result=[]
-        for(var i=0;i<Array.length;i++){
-            if(Array.isArray(Array[i])){ //判断是否为数组
-                result.push(...Array[i]) //拆开push
+        for(var i=0;i<array.length;i++){
+            if(Array.isArray(array[i])){ //判断是否为数组
+                result.push(...array[i]) //拆开push
             }else{
-                result.push(Array[i])
+                result.push(array[i])
             }
         }
         return result
     }
 
-    function flattenDeep(Array){
+    function flattenDeep(ary){
         var result=[]
         for(var i=0;i<ary.length;i++){
             if(Array.isArray(ary[i])){
-                result.push(...flattenDeep(Array[i]))
+                result.push(...flattenDeep(ary[i]))
             }else{
-                result.push(Array[i])
+                result.push(ary[i])
             }
         }
         return result
     }
 
-    function flattenDepth(Array,num){
+    function flattenDepth(ary,num){
         while(num){
-            Array=flatten(Array)
+            ary=flatten(ary)
             num--
         }
-        return Array
+        return ary
     }
 
     function fromPairs(pairs){
@@ -201,8 +201,19 @@ var chenshatter =function(){
         return map
     }
 
+    function difference(ary,...val){
+        var result=[]
+        var val1=[].concat(val)
+        for(var i=0;i<ary.length;i++){
+            if(val1.indexOf(ary[i]==-1)){
+                result.push(ary[i])
+            }
+        }
+        return result
+    }
+
 return {
-    compact,chunk,join,last,lastIndexOf,drop,dropRight,fill,head,indexOf,initial,reverse,sortedIndex,max,min,sum,flatten,flattenDeep,flattenDepth,fromPairs,
+    compact,chunk,join,last,lastIndexOf,drop,dropRight,fill,head,indexOf,initial,reverse,sortedIndex,max,min,sum,flatten,flattenDeep,flattenDepth,fromPairs,difference,
 }
 
 }()
