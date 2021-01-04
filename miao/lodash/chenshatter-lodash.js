@@ -203,7 +203,7 @@ var chenshatter =function(){
 
     function difference(ary,...val){
         var result=[]
-        var val1=[].concat(val)
+        var val1=[].concat(...val)
         for(var i=0;i<ary.length;i++){
             if(val1.indexOf(ary[i]==-1)){
                 result.push(ary[i])
@@ -212,8 +212,39 @@ var chenshatter =function(){
         return result
     }
 
+    function intersection(...arys){
+        var result = arys[0]
+        for(var i=0;i<arys.length;i++){
+            result=result.filter(val=>{
+                return arys[i].includes(val)
+            })
+        }
+        return result
+    }
+    
+    function pull(ary,...val){
+        var result =[]
+        ary.forEach(val1=>{
+            if(!val.includes(val1)){
+                result.push(val)
+            }
+        })
+        return result
+    }
+
+    function union(arys){
+        var result =[]
+        arys=flattenDeep(arys)
+        arys.forEach(val=>{
+            if(!result.includes(val)){
+                result.push(val)
+            }
+        })
+        return result
+    }
+
 return {
-    compact,chunk,join,last,lastIndexOf,drop,dropRight,fill,head,indexOf,initial,reverse,sortedIndex,max,min,sum,flatten,flattenDeep,flattenDepth,fromPairs,difference,
+    compact,chunk,join,last,lastIndexOf,drop,dropRight,fill,head,indexOf,initial,reverse,sortedIndex,max,min,sum,flatten,flattenDeep,flattenDepth,fromPairs,difference,intersection,pull,union,
 }
 
 }()
